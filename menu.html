@@ -3,204 +3,172 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu - The Brew Crew Co.</title>
+  <title>The Brew Crew Co. - Menu</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: turquoise url('coffee-beans.png') repeat;
-      background-size: cover;
       margin: 0;
       padding: 0;
-      color: black;
+      background-color: #e0f7f7; /* light turquoise */
+      background-image: url("coffee-beans.png");
+      background-size: cover;
+      background-attachment: fixed;
     }
     header {
       display: flex;
       align-items: center;
-      gap: 20px;
-      padding: 20px;
-      background-color: rgba(64, 224, 208, 0.85);
-      color: white;
+      background-color: rgba(64, 224, 208, 0.9);
+      padding: 15px;
     }
     header img {
-      width: 120px;
-      height: auto;
+      height: 70px;
+      margin-right: 20px;
     }
-    header .title h1 {
-      font-size: 42px;
+    header h1 {
+      font-size: 2rem;
       margin: 0;
     }
-    header .title p {
-      font-size: 20px;
-      margin: 5px 0 0 0;
-    }
     nav {
-      text-align: center;
-      background-color: #008B8B;
-      padding: 12px;
+      margin-left: auto;
     }
     nav a {
-      color: white;
-      text-decoration: none;
       margin: 0 15px;
-      font-size: 18px;
+      text-decoration: none;
+      color: black;
       font-weight: bold;
     }
     nav a:hover {
-      color: yellow;
+      text-decoration: underline;
     }
     .menu {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
       padding: 20px;
     }
-    .item {
-      background-color: rgba(255, 255, 255, 0.95);
-      border-radius: 12px;
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      border: 3px solid turquoise;
+    .section-title {
+      font-size: 1.5rem;
+      background: white;
+      color: black;
+      display: inline-block;
+      padding: 8px 15px;
+      border-radius: 8px;
+      margin: 20px 0 10px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
-    .item img {
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
+    .menu-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      background-color: white;
       border-radius: 10px;
-      border: 3px solid turquoise;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      cursor: pointer;
     }
-    .item h3 {
-      margin: 10px 0 5px;
-      font-size: 20px;
+    .menu-item img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      margin-right: 15px;
+      border-radius: 8px;
+    }
+    .menu-item h3 {
+      margin: 0;
+      font-size: 1.2rem;
     }
     .price {
-      font-size: 18px;
-      font-weight: bold;
       color: black;
+      font-weight: bold;
+      margin-left: auto;
     }
   </style>
+  <script>
+    function showIngredients(name, ingredients) {
+      alert(name + " ingredients:\n" + ingredients);
+    }
+  </script>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="The Brew Crew Co. logo">
-    <div class="title">
-      <h1>The Brew Crew Co.</h1>
-      <p><em>Fuel Your Day, The Tasty Way</em></p>
-    </div>
+    <img src="logo.png" alt="The Brew Crew Co. Logo">
+    <h1>The Brew Crew Co.</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="cards.html">Cards</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="menu.html">Menu</a>
-    <a href="gallery.html">Gallery</a>
-  </nav>
+  <main class="menu">
+    <h2 class="section-title">Drinks</h2>
 
-  <section class="menu">
-
-    <!-- ☕ Coffee Drinks -->
-    <div class="item">
-      <img src="flatwhite.png" alt="Flat White">
-      <h3>Flat White</h3>
-      <p class="price">ZAR30</p>
+    <div class="menu-item" onclick="showIngredients('Flat White', 'Frothed milk, ground coffee, boiling water')">
+      <img src="flatwhite.png" alt="Flat White"><h3>Flat White</h3><span class="price">ZAR30</span>
     </div>
 
-    <div class="item">
-      <img src="flatwhite-ds.png" alt="Flat White Double Shot">
-      <h3>Flat White (D.S.)</h3>
-      <p class="price">ZAR35</p>
+    <div class="menu-item" onclick="showIngredients('Flat White (D.S.)', 'Frothed milk, boiling water, ground coffee')">
+      <img src="flatwhite-ds.png" alt="Flat White Double Shot"><h3>Flat White (D.S.)</h3><span class="price">ZAR35</span>
     </div>
 
-    <div class="item">
-      <img src="black.png" alt="Black Coffee">
-      <h3>Black</h3>
-      <p class="price">ZAR35</p>
+    <div class="menu-item" onclick="showIngredients('Black', 'Ground coffee, boiling water')">
+      <img src="black.png" alt="Black Coffee"><h3>Black</h3><span class="price">ZAR35</span>
     </div>
 
-    <div class="item">
-      <img src="africano.png" alt="Africano">
-      <h3>Africano</h3>
-      <p class="price">ZAR25</p>
+    <div class="menu-item" onclick="showIngredients('Africano', 'Boiling water, ground coffee')">
+      <img src="africano.png" alt="Africano"><h3>Africano</h3><span class="price">ZAR25</span>
     </div>
 
-    <div class="item">
-      <img src="africano-ds.png" alt="Africano Double Shot">
-      <h3>Africano (D.S.)</h3>
-      <p class="price">ZAR30</p>
+    <div class="menu-item" onclick="showIngredients('Africano (D.S.)', 'Boiling water, ground coffee')">
+      <img src="africano-ds.png" alt="Africano Double Shot"><h3>Africano (D.S.)</h3><span class="price">ZAR30</span>
     </div>
 
-    <div class="item">
-      <img src="baby-cappuccino.png" alt="Baby Cappuccino">
-      <h3>Baby Cappuccino</h3>
-      <p class="price">ZAR25</p>
+    <div class="menu-item" onclick="showIngredients('Baby Cappuccino', 'Frothed milk')">
+      <img src="baby-cappuccino.png" alt="Baby Cappuccino"><h3>Baby Cappuccino</h3><span class="price">ZAR25</span>
     </div>
 
-    <div class="item">
-      <img src="mocha.png" alt="Mocha">
-      <h3>Mocha</h3>
-      <p class="price">ZAR35</p>
+    <div class="menu-item" onclick="showIngredients('Mocha', 'Hot chocolate powder, boiling water, frothed milk, ground coffee')">
+      <img src="mocha.png" alt="Mocha"><h3>Mocha</h3><span class="price">ZAR35</span>
     </div>
 
-    <div class="item">
-      <img src="mocha-ds.png" alt="Mocha Double Shot">
-      <h3>Mocha (D.S.)</h3>
-      <p class="price">ZAR40</p>
+    <div class="menu-item" onclick="showIngredients('Mocha (D.S.)', 'Ground coffee, frothed milk, boiling water, hot chocolate powder')">
+      <img src="mocha-ds.png" alt="Mocha Double Shot"><h3>Mocha (D.S.)</h3><span class="price">ZAR40</span>
     </div>
 
-    <div class="item">
-      <img src="hot-chocolate.png" alt="Hot Chocolate">
-      <h3>Hot Chocolate</h3>
-      <p class="price">ZAR25</p>
+    <div class="menu-item" onclick="showIngredients('Hot Chocolate', 'Hot chocolate powder, boiling water, frothed milk')">
+      <img src="hot-chocolate.png" alt="Hot Chocolate"><h3>Hot Chocolate</h3><span class="price">ZAR25</span>
     </div>
 
-    <div class="item">
-      <img src="rooibos.png" alt="Rooibos Tea">
-      <h3>Tea Rooibos</h3>
-      <p class="price">ZAR25</p>
+    <div class="menu-item" onclick="showIngredients('Tea Rooibos', 'Rooibos teabag, boiling water')">
+      <img src="rooibos.png" alt="Rooibos Tea"><h3>Tea Rooibos</h3><span class="price">ZAR25</span>
     </div>
 
-    <div class="item">
-      <img src="five-roses.png" alt="Five Roses Tea">
-      <h3>Tea Five Roses</h3>
-      <p class="price">ZAR25</p>
+    <div class="menu-item" onclick="showIngredients('Tea Five Roses', 'Five Roses teabag, boiling water')">
+      <img src="five-roses.png" alt="Five Roses Tea"><h3>Tea Five Roses</h3><span class="price">ZAR25</span>
     </div>
 
-    <!-- 🍹 Cold Drinks -->
-    <div class="item">
-      <img src="lemonade-250.png" alt="Lemonade 250ml">
-      <h3>Lemonade 250ml</h3>
-      <p class="price">ZAR10</p>
+    <div class="menu-item" onclick="showIngredients('Lemonade (250ml)', 'Lemonade 250ml bottle')">
+      <img src="lemonade-250.png" alt="Lemonade 250ml"><h3>Lemonade (250ml)</h3><span class="price">ZAR10</span>
     </div>
 
-    <div class="item">
-      <img src="lemonade-1l.png" alt="Lemonade 1L">
-      <h3>Lemonade 1L</h3>
-      <p class="price">ZAR35</p>
+    <div class="menu-item" onclick="showIngredients('Lemonade (1L)', 'Lemonade 1 liter bottle')">
+      <img src="lemonade-1l.png" alt="Lemonade 1L"><h3>Lemonade (1L)</h3><span class="price">ZAR35</span>
     </div>
 
-    <!-- 🍪 Snacks -->
-    <div class="item">
-      <img src="choc-cookie.png" alt="Chocolate Cookie">
-      <h3>Chocolate Cookie</h3>
-      <p class="price">ZAR8</p>
+    <h2 class="section-title">Snacks</h2>
+
+    <div class="menu-item">
+      <img src="pb-cookie.png" alt="Peanut Butter Cookie"><h3>Peanut Butter Cookie (Small)</h3><span class="price">ZAR8</span>
     </div>
 
-    <div class="item">
-      <img src="pb-cookie-small.png" alt="Peanut Butter Cookie Small">
-      <h3>Peanut Butter Cookie (Small)</h3>
-      <p class="price">ZAR8</p>
+    <div class="menu-item">
+      <img src="pb-cookie-big.png" alt="Big Peanut Butter Cookie"><h3>Peanut Butter Cookie (Big)</h3><span class="price">ZAR15</span>
     </div>
 
-    <div class="item">
-      <img src="pb-cookie-big.png" alt="Peanut Butter Cookie Big">
-      <h3>Peanut Butter Cookie (Big)</h3>
-      <p class="price">ZAR15</p>
+    <div class="menu-item">
+      <img src="choc-cookie.png" alt="Chocolate Cookie"><h3>Chocolate Cookie</h3><span class="price">ZAR8</span>
     </div>
 
-    <div class="item">
-      <img src="fudge.png" alt="Fudge">
-      <h3>Fudge</h3>
-      <p class="price">ZAR8</p>
+    <div class="menu-item">
+      <img src="fudge.png" alt="Fudge"><h3>Fudge</h3><span class="price">ZAR8</span>
     </div>
-  </section>
+  </main>
 </body>
 </html>
