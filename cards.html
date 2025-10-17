@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Brew Crew Co. - Cards</title>
+  <style>
+    body {
+      font-family: 'Lexend', sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: #009999;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 18px;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+      text-align: center;
+      color: #006666;
+      margin-top: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      font-size: 24px;
+      color: #006666;
+    }
+
+    .cards-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      width: 200px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      padding: 10px;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .name {
+      font-size: 18px;
+      margin-top: 8px;
+      font-weight: bold;
+      color: black;
+    }
+
+    .rarity {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    /* --- Rarity styles --- */
+    .EXOTIC {
+      color: gold;
+      border: 4px solid gold;
+      box-shadow: 0 0 10px gold;
+    }
+
+    .EPIC {
+      color: purple;
+      border: 4px solid purple;
+      box-shadow: 0 0 10px purple;
+    }
+
+    .RARE {
+      color: royalblue;
+      border: 4px solid royalblue;
+      box-shadow: 0 0 10px royalblue;
+    }
+
+    .COMMON {
+      color: gray;
+      border: 4px solid gray;
+      box-shadow: 0 0 10px gray;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="cards.html">Cards</a>
+  </nav>
+
+  <h1>Creature Cards</h1>
+
+  <!-- EXOTIC -->
+  <h2>EXOTIC – R20</h2>
+  <div class="cards-row">
+    <div class="card EXOTIC"><img src="aurelian.png"><div class="name">Aurelian</div></div>
+    <div class="card EXOTIC"><img src="photonis.png"><div class="name">Photonis</div></div>
+    <div class="card EXOTIC"><img src="tidalus.png"><div class="name">Tidalus</div></div>
+  </div>
+
+  <!-- EPIC -->
+  <h2>EPIC – R15</h2>
+  <div class="cards-row">
+    <div class="card EPIC"><img src="pyrrhus.png"><div class="name">Pyrrhus</div></div>
+    <div class="card EPIC"><img src="dunestrider.png"><div class="name">Dunestrider</div></div>
+    <div class="card EPIC"><img src="pyrofang.png"><div class="name">Pyrofang</div></div>
+    <div class="card EPIC"><img src="glacira.png"><div class="name">Glacira</div></div>
+    <div class="card EPIC"><img src="voltrax.png"><div class="name">Voltrax</div></div>
+    <div class="card EPIC"><img src="terranox.png"><div class="name">Terranox</div></div>
+    <div class="card EPIC"><img src="mirelur.png"><div class="name">Mirelur</div></div>
+    <div class="card EPIC"><img src="shiverclaw.png"><div class="name">Shiverclaw</div></div>
+    <div class="card EPIC"><img src="arachion.png"><div class="name">Arachion</div></div>
+  </div>
+
+  <!-- RARE -->
+  <h2>RARE – R10</h2>
+  <div class="cards-row">
+    <div class="card RARE"><img src="blazefury.png"><div class="name">Blazefury</div></div>
+    <div class="card RARE"><img src="aquaris.png"><div class="name">Aquaris</div></div>
+    <div class="card RARE"><img src="cindralis.png"><div class="name">Cindralis</div></div>
+    <div class="card RARE"><img src="umbros.png"><div class="name">Umbros</div></div>
+    <div class="card RARE"><img src="voltara.png"><div class="name">Voltara</div></div>
+    <div class="card RARE"><img src="magnus.png"><div class="name">Magnus</div></div>
+    <div class="card RARE"><img src="umbrith.png"><div class="name">Umbrith</div></div>
+    <div class="card RARE"><img src="frostbane.png"><div class="name">Frostbane</div></div>
+    <div class="card RARE"><img src="solaryn.png"><div class="name">Solaryn</div></div>
+    <div class="card RARE"><img src="pyroclast.png"><div class="name">Pyroclast</div></div>
+    <div class="card RARE"><img src="gelmor.png"><div class="name">Gelmor</div></div>
+  </div>
+
+  <!-- COMMON -->
+  <h2>COMMON – R5</h2>
+  <div class="cards-row">
+    <div class="card COMMON"><img src="ignus.png"><div class="name">Ignus</div></div>
+    <div class="card COMMON"><img src="vulcanus.png"><div class="name">Vulcanus</div></div>
+    <div class="card COMMON"><img src="solara.png"><div class="name">Solara</div></div>
+    <div class="card COMMON"><img src="sirenia.png"><div class="name">Sirenia</div></div>
+    <div class="card COMMON"><img src="leviara.png"><div class="name">Leviara</div></div>
+    <div class="card COMMON"><img src="nerissa.png"><div class="name">Nerissa</div></div>
+    <div class="card COMMON"><img src="vulpyra.png"><div class="name">Vulpyra</div></div>
+    <div class="card COMMON"><img src="lumora.png"><div class="name">Lumora</div></div>
+    <div class="card COMMON"><img src="arboron.png"><div class="name">Arboron</div></div>
+    <div class="card COMMON"><img src="lithar.png"><div class="name">Lithar</div></div>
+    <div class="card COMMON"><img src="abyssus.png"><div class="name">Abyssus</div></div>
+    <div class="card COMMON"><img src="nimbus.png"><div class="name">Nimbus</div></div>
+    <div class="card COMMON"><img src="nyxthid.png"><div class="name">Nyxthid</div></div>
+    <div class="card COMMON"><img src="crygor.png"><div class="name">Crygor</div></div>
+    <div class="card COMMON"><img src="fenrix.png"><div class="name">Fenrix</div></div>
+    <div class="card COMMON"><img src="zephyra.png"><div class="name">Zephyra</div></div>
+    <div class="card COMMON"><img src="aerion.png"><div class="name">Aerion</div></div>
+  </div>
+
+</body>
+</html>
