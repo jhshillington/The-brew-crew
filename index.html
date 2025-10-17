@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Brew Crew Co.</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #e0f7f7;
+      background-image: url('coffee-beans.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #222;
+    }
+
+    header {
+      background-color: #008B8B;
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      color: white;
+    }
+
+    header img {
+      width: 60px;
+      height: 60px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    nav {
+      background-color: rgba(0, 139, 139, 0.9);
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .team-section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .team-section h2 {
+      color: #008B8B;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      justify-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .member {
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      width: 220px;
+      padding: 15px;
+      transition: transform 0.2s;
+    }
+
+    .member:hover {
+      transform: scale(1.05);
+    }
+
+    .member img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .member h3 {
+      color: #008B8B;
+      margin: 10px 0 5px;
+    }
+
+    .member p {
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .group-photos {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .group-photos img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    footer {
+      background-color: #008B8B;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Brew Crew Logo">
+    <h1>The Brew Crew Co.</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="cards.html">Cards</a>
+  </nav>
+
+  <section class="team-section">
+    <h2>Meet the Team</h2>
+    <div class="team-grid">
+      <div class="member">
+        <img src="jacob-s.png" alt="Jacob Shillington">
+        <h3>Jacob Shillington</h3>
+        <p>Co-Founder • Loves sports, great academically, and amazing at talking to people.</p>
+      </div>
+      <div class="member">
+        <img src="jacob-vt.png" alt="Jacob Van Tonder">
+        <h3>Jacob Van Tonder</h3>
+        <p>Co-Founder • Passionate about sports and always striving for academic excellence.</p>
+      </div>
+      <div class="member">
+        <img src="daniel.png" alt="Daniel Mercer">
+        <h3>Daniel Mercer</h3>
+        <p>Partner • Fantastic academically and someone you can always rely on.</p>
+      </div>
+      <div class="member">
+        <img src="elliot.png" alt="Elliot Brown">
+        <h3>Elliot Brown</h3>
+        <p>Partner • Great at certain sports and full of energy and determination.</p>
+      </div>
+      <div class="member">
+        <img src="julian.png" alt="Julian Van De Laak">
+        <h3>Julian Van De Laak</h3>
+        <p>Partner • Excellent overall at sports and great at communicating with people.</p>
+      </div>
+    </div>
+
+    <div class="group-photos">
+      <img src="group-jacobs.png" alt="Jacob Shillington and Jacob Van Tonder">
+      <img src="group-crew.png" alt="The Brew Crew Team">
+    </div>
+  </section>
+
+  <footer>
+    <p>Fuel Your Day, The Tasty Way • The Brew Crew Co.</p>
+  </footer>
+</body>
+</html>
